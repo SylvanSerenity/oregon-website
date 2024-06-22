@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 	video.addEventListener("canplay", (e) => {
 		const overlay = document.getElementById("video-overlay");
-		overlay.style.animation = "fadeOut 1s forwards";
+		video.play().catch((error) => {
+			console.log("Autoplay failed: ", error);
+		});
+		overlay.style.animation = "fadeOut 1s forwards";	
 	});
 });
