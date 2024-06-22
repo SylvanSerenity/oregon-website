@@ -11,6 +11,10 @@ html {
 	-webkit-text-size-adjust: none;
 }
 
+#oregon {
+	display: none;
+}
+
 #drop-content {
 	min-width: 100px;
 }

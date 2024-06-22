@@ -5,6 +5,10 @@
 		--title-font-size: 48px;
 	}
 
+	#oregon {
+		display: flex;
+	}
+
 	#drop-content {
 		min-width: 120px;
 	}
