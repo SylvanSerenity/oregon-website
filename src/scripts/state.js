@@ -6,7 +6,7 @@ function adjustTitle() {
 
 	// Scroll with the user
 	const startTop = videoContainer.offsetHeight - title.offsetHeight;
-	const maxScroll = startTop / 2 - 10; // Maintain a 10px padding
+	const maxScroll = startTop / 2 - (videoContainer.offsetHeight * 0.03); // Maintain a 3% padding
 	let newTop;
 	if (scrollPosition <= maxScroll) {
         // Center title
@@ -18,6 +18,7 @@ function adjustTitle() {
 	title.style.top = `calc(50% + ${newTop}px)`;
 }
 
+document.addEventListener("DOMContentLoaded", adjustTitle);
 document.addEventListener("scroll", adjustTitle);
 window.addEventListener("resize", adjustTitle);
 
