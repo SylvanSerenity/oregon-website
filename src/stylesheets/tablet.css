@@ -1,0 +1,29 @@
+@media only screen and (min-width: 641px) {
+	:root { /* Variables */
+		--aside-width: 250px;
+		--aside-toggle-size: calc(var(--nav-height) / 1.5);
+		--title-font-size: 48px;
+	}
+
+	#drop-content {
+		min-width: 120px;
+	}
+
+	.content-item {
+		max-width: 80%;
+	}
+
+	textarea {
+		width: 15rem;
+		height: 5rem;
+	}
+
+	.content-wrapper {
+		overflow-x: hidden;
+	}
+
+	.table-wrapper {
+		align-items: center;
+		overflow-x: hidden;
+	}
+}

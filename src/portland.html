@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- HEAD -->
+	<head>
+		<!-- METADATA -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Information about Oregon and its most popular cities!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+		<!-- ICON -->
+		<link rel="shortcut icon" href="assets/favicon.ico">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="stylesheets/mobile.css">
+		<link rel="stylesheet" href="stylesheets/tablet.css">
+		<link rel="stylesheet" href="stylesheets/desktop.css">
+		<link rel="stylesheet" href="stylesheets/style.css"> <!-- Global style -->
+		<link rel="stylesheet" href="stylesheets/cities.css"> <!-- City style -->
+		<link rel="stylesheet" href="stylesheets/cities/portland.css"> <!-- Portland style -->
+
+		<!-- SCRIPTS -->
+		<script src="scripts/main.js" defer></script>
+
+		<!-- TITLE -->
+		<title>City of Portland, Oregon</title>
+	</head>
+
+	<!-- BODY -->
+	<body>
+		<!-- NAVIGATION -->
+		<div id="navbar-wrapper">
+			<nav id="navbar">
+				<div id="navbar-left">
+					<a href="index.html" class="navbar-item"><img src="assets/flag.png" alt="Oregon" id="logo"></a>
+					<ul class="navbar-item">
+						<li>
+							<a href="index.html">Oregon</a>
+						</li>
+						<li>
+							<a href="salem.html">Capital</a>
+						</li>
+						<li id="drop-down">
+							<a href="javascript:void(0)">Cities</a>
+							<div id="drop-content">
+								<span><a href="portland.html">Portland</a></span>
+								<span><a href="salem.html">Salem</a></span>
+								<span><a href="bend.html">Bend</a></span>
+								<span><a href="lake-oswego.html">Lake Oswego</a></span>
+								<span><a href="klamath-falls.html">Klamath Falls</a></span>
+								<span><a href="pendleton.html">Pendleton</a></span>
+								<span><a href="the-dalles.html">The Dalles</a></span>
+								<span><a href="tillamook.html">Tillamook</a></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="navbar-right">
+					<ul class="navbar-item">
+						<li>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- ASIDE -->
+			<button type="button" id="toggle-aside">
+				<span id="toggle-icon">&#x25B6;</span> <!-- Right arrow icon -->
+			</button>
+			<aside id="left-aside">
+
+				<!-------------------------->
+				<!-- START UNIQUE CONTENT -->
+				<!-------------------------->
+				<h1>References</h1>
+				<ol>
+					<li>
+						<a href="https://wanderingwheatleys.com/best-neighborhoods-portland-oregon" target="_blank">
+							Wheatley, V. (2023, May 24). <i>Portland Neighborhoods: A travel guide to Portland, Oregon</i>. Wandering Wheatleys.
+						</a>
+					</li>
+					<li>
+						<a href="https://www.census.gov/quickfacts/fact/table/portlandcityoregon" target="_blank">
+							U.S. Census Bereau. (2023). <i>QuickFacts: Portland City</i>. U.S. Census Bureau.
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Portland,_Oregon" target="_blank">
+							Wikipedia contributors. (2024, June 21). <i>Portland, Oregon</i>. Wikipedia.
+						</a>
+					</li>
+					<li>
+						<a href="https://www.census.gov/quickfacts/fact/table/portlandcityoregon" target="_blank">
+							Wikipedia contributors. (2024, June 15). <i>Shanghai tunnels</i>. Wikipedia.
+						</a>
+					</li>
+					<li>
+						<a href="https://commons.wikimedia.org/wiki/File:Portland,_Oregon,_in_1898_-_Herbert_A._Hale.jpg" target="_blank">
+							Hale, H. A. (1862). <i>Portland, Oregon in 1898</i>. Wikipedia.
+						</a>
+					</li>
+				</ol>
+			</aside>
+		</div>
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<!-- HEADER -->
+			<header class="content-wrapper">
+				<div id="title">
+					<h1>Portland, Oregon</h1>
+					<img id="flag" src="assets/portland/portland-flag.svg" alt="Portland's flag">
+					<h1 class="motto">Rose City</h1>
+					<h2 class="motto">The City that Works</h2>
+				</div>
+			</header>
+
+			<!-- SECTION -->
+			<section class="content-wrapper">
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th>City</th>
+								<th>Founded</th>
+								<th class="th-wrapper">
+									Region
+									<a href="https://en.wikipedia.org/wiki/File:Regions_of_Oregon.svg" target="_blank">
+										<img src="assets/oregon-regions.svg" alt="Regions">
+									</a>
+								</th>
+								<th>Population</th>
+								<th>Urbanicity</th>
+								<th>Affluence</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Portland</td>
+								<td>1845</td>
+								<td class="willamette-valley">Willamette Valley</td>
+								<td class="high">630,498</td>
+								<td class="high">Urban</td>
+								<td class="above-average">Above Average</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="content-wrapper">
+					<h1>Did you know?</h1>
+					<div class="content-item">
+						<a href="https://commons.wikimedia.org/wiki/File:Portland,_Oregon,_in_1898_-_Herbert_A._Hale.jpg" target="_blank">
+							<img src="assets/portland/portland-1898.jpg" alt="Portland, 1898">
+						</a>
+						<ul>
+							<li>
+								Portland borders Washington State separated by the Willamette river, which runs nearly
+								200 miles to the Pacific ocean.
+								<a href="https://en.wikipedia.org/wiki/Portland,_Oregon" target="_blank" class="reference"><sup>3</sup></a>
+							</li>
+							<li>
+								The Old Portland Underground tunnels exist underneath the city of Portland. Many believe the so-called 
+								"Shanghai Tunnels" were used in the late 19th and early 20th centuries for organized crime and shanghaiing,
+								but there is little evidence to support these claims.
+								<a href="https://en.wikipedia.org/wiki/Shanghai_tunnels" target="_blank" class="reference"><sup>4</sup></a>
+							</li>
+							<li>
+								Until the technology industry emerged in the 1990's, Portland had a reputation for being one of the
+								most violent and dangerous port cities in the world with organized crime, illegal nightclubs, and gambling rackets.
+								<a href="https://en.wikipedia.org/wiki/Portland,_Oregon" target="_blank" class="reference"><sup>3</sup></a>
+							</li>
+							<li>
+								The hippie subculture arose shortly after the countercultural scene in San Fransisco. Many activists began
+								fighting for social rights around the same time, and by the 1970's, Portland was seen as a predominantly
+								progressive city.
+								<a href="https://en.wikipedia.org/wiki/Portland,_Oregon" target="_blank" class="reference"><sup>3</sup></a>
+							</li>
+							<li>
+								Portland is now the most populous city in Oregon with over 600,000 residents. The Portland metro area
+								accounts for about 60% of Oregon's population despite taking up only 7% of the state's land.
+								<a href="https://www.census.gov/quickfacts/fact/table/portlandcityoregon" target="_blank" class="reference"><sup>2</sup></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

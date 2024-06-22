@@ -1,0 +1,40 @@
+:root {
+	--title-color: white;
+}
+
+/* HEADER */
+header {
+	width: 100vw;
+	min-height: 50vh;
+	max-width: 100vw;
+	color: var(--title-color);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+header h1, h2 {
+	padding: 15px;
+	background-color: rgba(0, 80, 40, 0.2);
+	border-radius: 10px;
+}
+
+#title {
+	margin-top: calc(var(--aside-toggle-size));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+#flag {
+	padding: 10px;
+	max-width: 20em;
+	max-height: 50vh;
+}
+
+/* SECTION */
+.motto {
+	font-family: "Brush Script MT"	/* Fancy cursive */
+}

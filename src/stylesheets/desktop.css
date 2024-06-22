@@ -1,0 +1,36 @@
+@media only screen and (min-width: 1141px) {
+	:root { /* Variables */
+		--nav-height: 70px;
+		--nav-item-width: 100px;
+		--nav-font-size: 18px;
+		--aside-width: 300px;
+		--aside-toggle-size: calc(var(--nav-height) / 1.8);
+		--title-font-size: 64px;
+	}
+
+	#drop-content {
+		min-width: 150px;
+	}
+
+	#drop-content a {
+		padding: 10px;
+	}
+
+	.content-item {
+		max-width: 60%;
+	}
+
+	.input-wrapper {
+		display: flex;	/* Display errors to the right of the input box */
+	}
+
+	textarea {
+		resize: both;
+	}
+
+	.error {
+		/* Display errors to the right of the input box */
+		position: absolute;
+		left: 100%;
+	}
+}

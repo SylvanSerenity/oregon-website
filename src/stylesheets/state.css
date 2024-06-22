@@ -1,0 +1,72 @@
+:root {
+	--title-color: white;
+}
+
+/* HEADER */
+header {
+	display: block;
+	max-width: 100vw;
+	margin: 0;
+	width: 100vw;
+	height: calc(100vh - var(--nav-height));
+}
+
+#title-wrapper {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	/* Keep on top of video */
+	position: relative;
+	z-index: 10;	/* Place above background video */
+	/* Keep centered */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* Visual */
+	font-size: var(--title-font-size);
+	color: var(--title-color);
+}
+
+#title-wrapper h1 {
+	opacity: 0.65;
+}
+
+#bg-video-wrapper {
+	position: absolute;
+	max-width: 100vw;
+	min-width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;	/* Keep video behind content */
+	background-color: black;
+}
+
+#bg-video {
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	object-fit: cover;
+}
+
+#video-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: 5;	/* Stay above video and below title */
+	/* Start by covering video */
+	opacity: 1;
+	background-color: black;
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+/* TABLE */
+
+tbody tr:hover {
+	background-color: rgb(238, 238, 238);
+}

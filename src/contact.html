@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- HEAD -->
+	<head>
+		<!-- METADATA -->
+		<meta charset="utf-8">
+		<meta name="description" content="Oregon website maintenance contact form.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+		<!-- ICON -->
+		<link rel="shortcut icon" href="assets/favicon.ico">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="stylesheets/mobile.css">
+		<link rel="stylesheet" href="stylesheets/tablet.css">
+		<link rel="stylesheet" href="stylesheets/desktop.css">
+		<link rel="stylesheet" href="stylesheets/contact-form.css"> <!-- Contact form style -->
+		<link rel="stylesheet" href="stylesheets/style.css"> <!-- Global style -->
+
+		<!-- SCRIPTS -->
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/contact-form.js" defer></script>
+
+		<!-- TITLE -->
+		<title>Contact Us - State of Oregon</title>
+	</head>
+
+	<!-- BODY -->
+	<body>
+		<!-- NAVIGATION -->
+		<div id="navbar-wrapper">
+			<nav id="navbar">
+				<div id="navbar-left">
+					<a href="index.html" class="navbar-item"><img src="assets/flag.png" alt="Oregon" id="logo"></a>
+					<ul class="navbar-item">
+						<li>
+							<a href="index.html">Oregon</a>
+						</li>
+						<li>
+							<a href="salem.html">Capital</a>
+						</li>
+						<li id="drop-down">
+							<a href="javascript:void(0)">Cities</a>
+							<div id="drop-content">
+								<span><a href="portland.html">Portland</a></span>
+								<span><a href="salem.html">Salem</a></span>
+								<span><a href="bend.html">Bend</a></span>
+								<span><a href="lake-oswego.html">Lake Oswego</a></span>
+								<span><a href="klamath-falls.html">Klamath Falls</a></span>
+								<span><a href="pendleton.html">Pendleton</a></span>
+								<span><a href="the-dalles.html">The Dalles</a></span>
+								<span><a href="tillamook.html">Tillamook</a></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="navbar-right">
+					<ul class="navbar-item">
+						<li>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- ASIDE -->
+			<button type="button" id="toggle-aside">
+				<span id="toggle-icon">&#x25B6;</span> <!-- Right arrow icon -->
+			</button>
+			<aside id="left-aside">
+
+				<!-------------------------->
+				<!-- START UNIQUE CONTENT -->
+				<!-------------------------->
+				<h1>References</h1>
+				<ol>
+					<li>
+						<a href="https://www.pngwing.com/en/free-png-czfvf" target="_blank">
+							<i>Heart in Oregon Portland Decal Sticker</i>. (n.d.). PNGWing.
+						</a>
+					</li>
+				</ol>
+			</aside>
+		</div>
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<!-- HEADER -->
+			<header>
+				<h1>We want to hear from you!</h1>
+				<img id="img-heart" src="assets/oregon-heart.png" alt="We love Oregon!">
+			</header>
+
+			<!-- SECTION -->
+			<section class="content-wrapper">
+				<h1>Enter your contact information below, and we'll get back to you as soon as we can.</h1>
+				<form id="contact-form">
+					<div class="form-item">
+						<label for="first-name">First Name:</label>
+						<div class="input-wrapper">
+							<input type="text" name="first-name" id="input-first-name" placeholder="John" pattern="[a-zA-Z\-]+" required>
+							<span class="error" id="input-first-name-error"></span>
+						</div>
+					</div>
+					<div class="form-item">
+						<label for="last-name">Last Name:</label>
+						<div class="input-wrapper">
+							<input type="text" name="last-name" id="input-last-name" placeholder="Doe" pattern="[a-zA-Z\-]+" required>
+							<span class="error" id="input-last-name-error"></span>
+						</div>
+					</div>
+
+					<div class="form-item">
+						<label for="email">Email:</label>
+						<div class="input-wrapper">
+							<input type="email" name="email" id="input-email" placeholder="john.doe@yahoo.com" required>
+							<span class="error" id="input-email-error"></span>
+						</div>
+					</div>
+					<div class="form-item">
+						<label for="email-verification">Verify Email:</label>
+						<div class="input-wrapper">
+							<input type="email" name="email-verification" id="input-email-verification" placeholder="john.doe@yahoo.com" required>
+							<span class="error" id="input-email-verification-error"></span>
+						</div>
+					</div>
+
+					<div class="form-item">
+						<label for="subject">Subject:</label>
+						<div class="input-wrapper">
+							<input type="text" name="subject" id="input-subject" placeholder="Website Review" required>
+							<span class="error" id="input-subject-error"></span>
+						</div>
+					</div>
+					<div class="form-item">
+						<label for="message">Message:</label>
+						<div class="input-wrapper">
+							<textarea name="message" id="input-message" placeholder="We suggest you improve..."></textarea>
+							<span class="error" id="input-message-error"></span>
+						</div>
+					</div>
+
+					<button type="submit">Send</button>
+				</form>
+			</section>
+		</div>
+	</body>
+</html>

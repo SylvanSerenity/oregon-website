@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- HEAD -->
+	<head>
+		<!-- METADATA -->
+		<meta charset="UTF-8">
+		<meta name="description" content="Information about Oregon and its most popular cities!">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+
+		<!-- ICON -->
+		<link rel="shortcut icon" href="assets/favicon.ico">
+
+		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="stylesheets/mobile.css">
+		<link rel="stylesheet" href="stylesheets/tablet.css">
+		<link rel="stylesheet" href="stylesheets/desktop.css">
+		<link rel="stylesheet" href="stylesheets/style.css"> <!-- Global style -->
+		<link rel="stylesheet" href="stylesheets/state.css"> <!-- State-only style -->
+
+		<!-- SCRIPTS -->
+		<script src="scripts/main.js" defer></script>
+		<script src="scripts/state.js" defer></script>
+
+		<!-- TITLE -->
+		<title>State of Oregon</title>
+	</head>
+
+	<!-- BODY -->
+	<body>
+		<!-- NAVIGATION -->
+		<div id="navbar-wrapper">
+			<nav id="navbar">
+				<div id="navbar-left">
+					<a href="index.html" class="navbar-item"><img src="assets/flag.png" alt="Oregon" id="logo"></a>
+					<ul class="navbar-item">
+						<li>
+							<a href="index.html">Oregon</a>
+						</li>
+						<li>
+							<a href="salem.html">Capital</a>
+						</li>
+						<li id="drop-down">
+							<a href="javascript:void(0)">Cities</a>
+							<div id="drop-content">
+								<span><a href="portland.html">Portland</a></span>
+								<span><a href="salem.html">Salem</a></span>
+								<span><a href="bend.html">Bend</a></span>
+								<span><a href="lake-oswego.html">Lake Oswego</a></span>
+								<span><a href="klamath-falls.html">Klamath Falls</a></span>
+								<span><a href="pendleton.html">Pendleton</a></span>
+								<span><a href="the-dalles.html">The Dalles</a></span>
+								<span><a href="tillamook.html">Tillamook</a></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div id="navbar-right">
+					<ul class="navbar-item">
+						<li>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- ASIDE -->
+			<button type="button" id="toggle-aside">
+				<span id="toggle-icon">&#x25B6;</span> <!-- Right arrow icon -->
+			</button>
+			<aside id="left-aside">
+
+				<!-------------------------->
+				<!-- START UNIQUE CONTENT -->
+				<!-------------------------->
+				<h1>References</h1>
+				<ol>
+					<li>
+						<a href="https://youtu.be/mBFEWBqPDkQ" target="_blank">
+							8K World. (2022, August 31). <i>Oregon in 8K ULTRA HD - Most beautiful state in USA (60FPS)</i> [Video]. YouTube.
+						</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/2bB6sbPQQuw" target="_blank">
+							The World Travel Guy. (2017, December 1). <i>Oregon by Drone - Tillamook, Ecola, Portland & more 4K travel footage</i> [Video]. YouTube.
+						</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/xZvy2CnVIB4" target="_blank">
+							Destination Paradise. (2021, April 4). <i>Oregon 4K Scenic Relaxation film | Mount Hood Drone Video | Portland Oregon aerial footage</i> [Video]. YouTube.
+						</a>
+					</li>
+					<li>
+						<a href="https://youtu.be/R9vcsMr5H2I" target="_blank">
+							4K VIRTUAL TRAVEL. (2020, September 13). <i>OREGON IN 4K | Central Oregon (Ultra HD) - Aerial drone views over forests, mountains & waterfalls</i> [Video]. YouTube.
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/File:Regions_of_Oregon.svg" target="_blank">
+							Kingofthedead & Ninjatacoshell. (2016, March 4). <i>Regions of Oregon</i>. Wikipedia.
+						</a>
+					</li>
+					<li>
+						<a href="https://www.census.gov/quickfacts/fact/table/OR" target="_blank">
+							U.S. Census Bereau. (2023). <i>QuickFacts: Oregon</i>. U.S. Census Bureau.
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Oregon" target="_blank">
+							Wikipedia contributors. (2001, August 31). <i>Oregon</i>. Wikipedia.
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/Mount_Hood" target="_blank">
+							Wikipedia contributors. (2024, May 8). <i>Mount Hood</i>. Wikipedia.
+						</a>
+					</li>
+					<li>
+						<a href="https://en.wikipedia.org/wiki/File:Mt._Hood_(8081466807).jpg" target="_blank">
+							Zach Dischner Photography. (2012, August 7). <i>Mount Hood</i>. Wikipedia.
+						</a>
+					</li>
+				</ol>
+			</aside>
+		</div>
+
+		<!-- CONTENT -->
+		<div id="content">
+
+			<!-- HEADER -->
+			<header>
+				<div id="bg-video-wrapper">
+					<video id="bg-video" autoplay muted loop>
+						<source src="assets/index/state-background.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<span id="video-overlay"></span>
+				<span id="title-wrapper"><h1>Oregon</h1></span>
+			</header>
+
+			<!-- SECTION -->
+			<section>
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th>City</th>
+								<th>Founded</th>
+								<th class="th-wrapper">
+									Region
+									<a href="https://en.wikipedia.org/wiki/File:Regions_of_Oregon.svg" target="_blank">
+										<img src="assets/oregon-regions.svg" alt="Regions">
+									</a>
+								</th>
+								<th>Population</th>
+								<th>Urbanicity</th>
+								<th>Affluence</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><a href="portland.html">Portland</a></td>
+								<td>1845</td>
+								<td class="willamette-valley">Willamette Valley</td>
+								<td class="high">630,498</td>
+								<td class="high">Urban</td>
+								<td class="above-average">Above Average</td>
+							</tr>
+							<tr>
+								<td><a href="salem.html">Salem</a></td>
+								<td>1842</td>
+								<td class="willamette-valley">Willamette Valley</td>
+								<td class="above-average">177,432</td>
+								<td class="high">Urban</td>
+								<td class="average">Average</td>
+							</tr>
+							<tr>
+								<td><a href="bend.html">Bend</a></td>
+								<td>1904</td>
+								<td class="central-oregon">Central Oregon</td>
+								<td class="above-average">104,557</td>
+								<td class="average">Mixed</td>
+								<td class="above-average">Above Average</td>
+							</tr>
+							<tr>
+								<td><a href="lake-oswego.html">Lake Oswego</a></td>
+								<td>1847</td>
+								<td class="willamette-valley">Willamette Valley</td>
+								<td class="average">39,924</td>
+								<td class="above-average">Suburban</td>
+								<td class="high">High</td>
+							</tr>
+							<tr>
+								<td><a href="klamath-falls.html">Klamath Falls</a></td>
+								<td>1867</td>
+								<td class="southern-oregon">Southern Oregon</td>
+								<td class="average">21,888</td>
+								<td class="below-average">Rural</td>
+								<td class="below-average">Below Average</td>
+							</tr>
+							<tr>
+								<td><a href="pendleton.html">Pendleton</a></td>
+								<td>1865</td>
+								<td class="eastern-oregon">Eastern Oregon</td>
+								<td class="average">17,289</td>
+								<td class="below-average">Rural</td>
+								<td class="average">Average</td>
+							</tr>
+							<tr>
+								<td><a href="the-dalles.html">The Dalles</a></td>
+								<td>1857</td>
+								<td class="columbia-river-gorge">Columbia River Gorge</td>
+								<td class="average">15,786</td>
+								<td class="below-average">Rural</td>
+								<td class="average">Average</td>
+							</tr>
+							<tr>
+								<td><a href="tillamook.html">Tillamook</a></td>
+								<td>1891</td>
+								<td class="willamette-valley">Willamette Valley</td>
+								<td class="below-average">5,196</td>
+								<td class="below-average">Rural</td>
+								<td class="average">Average</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="content-wrapper">
+					<h1>Did you know?</h1>
+					<div class="content-item">
+						<a href="https://en.wikipedia.org/wiki/File:Mt._Hood_(8081466807).jpg" target="_blank">
+							<img src="assets/index/mt-hood.jpg" alt="Photo of Mt. Hood">
+						</a>
+						<ul>
+							<li>
+								Oregon's statehood was declared on February 14, 1859, but nobody knew until March 15.
+								<a href="https://en.wikipedia.org/wiki/Oregon" target="_blank" class="reference"><sup>7</sup></a>
+							</li>
+							<li>
+								As of 2023, 4.2 million people inhabit Oregon.
+								<a href="https://www.census.gov/quickfacts/fact/table/OR" target="_blank" class="reference"><sup>6</sup></a>
+							</li>
+							<li>
+								Mt. Hood is the highest peak in Oregon at over 3.4 kilometers.
+								<a href="https://en.wikipedia.org/wiki/Mount_Hood" target="_blank" class="reference"><sup>7</sup></a>
+							</li>
+							<li>
+								The first evidence of humans in Oregon dates back to over 15,000 years ago.
+								<a href="https://en.wikipedia.org/wiki/Oregon" target="_blank" class="reference"><sup>6</sup></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

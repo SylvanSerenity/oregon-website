@@ -1,0 +1,56 @@
+:root { /* Variables */
+	--nav-height: 60px;
+	--nav-item-width: 80px;
+	--nav-font-size: 15px;
+	--aside-width: 75%;
+	--aside-toggle-size: calc(var(--nav-height) / 1.25);
+	--title-font-size: 3rem;
+}
+
+html {
+	-webkit-text-size-adjust: none;
+}
+
+#drop-content {
+	min-width: 100px;
+}
+
+#drop-content a {
+	padding: 10px;
+}
+
+.content-item {
+	max-width: 90%;
+}
+
+textarea {
+	width: 12rem;
+	height: 5rem;
+	min-width: 7rem;
+	min-height: 3rem;
+	max-width: 20vw;
+	max-height: 20vh;
+	resize: none;
+}
+
+.input-wrapper {
+	display: block;	/* Display errors below the input box */
+}
+
+.error {
+	position: static;
+}
+
+.content-wrapper {
+	overflow-x: auto;
+}
+
+.table-wrapper {
+	-webkit-overflow-scrolling: touch;
+	align-items: flex-start;
+	overflow-x: auto;
+}
+
+table, th, td {
+	font-size: 14px;
+}

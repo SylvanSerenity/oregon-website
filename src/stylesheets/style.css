@@ -1,0 +1,365 @@
+:root { /* Variables */
+	--bg-color: linen;
+	--nav-item-color: white;
+	--nav-item-hover-color: rgb(255, 235, 6);
+	--nav-color: rgb(0,39,134);
+	--nav-color-dark: rgb(0,30,120);
+	--nav-color-hover: rgba(0, 0, 0, 0.15);
+}
+
+* {
+	top: 0;					/* Always align to top	*/
+	left: 0;				/* Always align to left	*/
+	box-sizing: border-box;	/* Always use border-box layout */
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-color);
+	min-width: 100vw;	/* Make body cover the entire width of the screen for dark-mode viewers		*/
+	min-height: 100vh;	/* Make body cover the entire height of the screen for dark-mode viewers	*/
+	font-family: Arial, sans-serif;
+	overflow-x: hidden;
+}
+
+li {
+	padding: 5px 0;
+}
+
+
+
+/* NAV */
+#navbar-wrapper {
+	/* Pad to make body start at the top of the page	*/
+	/* instead of the first non-fixed element, and to	*/
+	/* have the content margin start after the nav bar	*/
+	padding-bottom: var(--nav-height);
+}
+
+nav {
+	background-color: var(--nav-color);
+	height: var(--nav-height);
+	width: 100%;
+	/* Stay on screen while scrolling */
+	position: fixed;
+	z-index: 100;
+	/* Make navbar-items split on the left and right side */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#logo {
+	height: var(--nav-height);
+}
+
+#navbar-left, #navbar-right {
+	/* Keep items centered */
+	display: flex;
+	align-items: center;
+}
+
+.navbar-item {
+	display: flex;
+	justify-content: center;
+	font-size: var(--nav-font-size);
+	list-style: none;	/* Remove dotted list style	*/
+	padding: 0;
+	margin: 0;
+}
+
+.navbar-item li {
+	position: relative;	/* Drop-down relative to nav bar	*/
+	display: flex;		/* Display across nav bar		*/
+	/* Center text */
+	justify-content: center;
+	align-items: center;
+	/* Position */
+	height: var(--nav-height);
+	min-width: var(--nav-item-width);
+	padding: 5px;
+}
+
+.navbar-item a {
+	color: var(--nav-item-color);
+	padding: 5px;
+	margin: 10px;
+	text-align: center;
+	text-decoration: none;	/* Remove underline */
+	display: block;
+}
+
+.navbar-item a:hover {
+	color: var(--nav-item-hover-color); /* Turn blue on hover */
+}
+
+.navbar-item li:hover {
+	background-color: var(--nav-color-dark); /* Darken navbar-items on hover */
+	transition: background-color 0.3s;
+}
+
+/* NAV: Drop-down menu */
+#drop-content {
+	top: 100%;		/* Align to the bottom of the drop-down */
+	/* Maintain front position */
+	position: absolute;
+	z-index: 100;
+	/* Hide at start */
+	display: block;
+	visibility: none;
+	max-height: 0;
+	overflow: hidden;
+	/* Visual */
+	background-color: var(--nav-color-dark);
+	transition: background-color 0.3s;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	border-radius: 0 0 7px 7px;
+	transition: max-height 0.3s ease-in-out;
+}
+
+#drop-content * {
+	border-radius: 0 0 7px 7px;
+}
+
+#drop-content a {
+	color: var(--nav-item-color);
+	margin: 0;
+	text-decoration: none;	/* Remove underline */
+	display: block;
+}
+
+#drop-content a:hover {
+	color: var(--nav-item-hover-color);			/* Turn blue on hover */
+	background-color: var(--nav-color-hover);	/* Darken drop-down content on hover */
+}
+
+#drop-content span:hover {
+	display: block;
+	background-color: var(--nav-color-hover);	/* Turn blue on hover */
+}
+
+#drop-down:hover {
+	background-color: var(--nav-color-dark);	/* Darken on hover */
+	transition: background-color 0.3s;
+}
+
+#drop-down:hover #drop-content {
+	/* Show drop-down content on drop-down hover */
+	visibility: visible;
+	max-height: 50vh;
+	animation: setOverflow 0.8s forwards;
+}
+
+@keyframes setOverflow {
+	from { overflow: hidden; }	/* Prevent scrolling until expand transition is complete */
+	to { overflow: auto; }		/* Allow for scrolling on tiny screens */
+}
+
+
+
+/* ASIDE */
+#toggle-aside {
+	top: var(--nav-height);
+	width: var(--aside-toggle-size);
+	height: var(--aside-toggle-size);
+	/* Stay on screen while scrolling */
+	position: fixed;
+	z-index: 99;
+	/* Visual */
+	color: var(--nav-item-color);
+	background-color: var(--nav-color);
+	border: none;
+	border-radius: 0 0 10px 0;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+	transition: left 0.3s ease;
+}
+
+#toggle-aside:hover {
+	color: var(--nav-item-hover-color);
+	background-color: var(--nav-color-dark);
+	transition: background-color 0.3s, left 0.3s ease;
+}
+
+#left-aside.show {
+	left: 0;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+#toggle-aside.move {
+	left: var(--aside-width);
+}
+
+#toggle-icon {
+	display: inline-block;
+	transition: transform 0.3s ease;
+}
+
+#toggle-aside.move #toggle-icon {
+	transform: rotate(180deg);
+}
+
+#left-aside {
+	margin-top: var(--nav-height);
+	left: calc(-1 * var(--aside-width));
+	width: var(--aside-width);
+	max-height: 50%;
+	/* Stay on screen while scrolling */
+	position: fixed;
+	z-index: 98;
+	/* Visual */
+	background-color: var(--bg-color);
+	padding: 20px;
+	border-radius: 5px;
+	transition: left 0.3s ease, box-shadow 0.3s ease-in-out;
+	overflow: auto;	/* Allow for scrolling on tiny screens */
+}
+
+
+
+/* CONTENT */
+#content {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	display: flex;
+	flex-direction: column;	/* Vertical content items */
+	align-items: center;
+	top: var(--nav-height);
+	overflow: hidden;
+	user-select: none;	/* Prevent user interaction with the header visuals */
+}
+
+header h1 {
+	margin-top: calc(var(--aside-toggle-size) + 10px);
+}
+
+section {
+	padding: 20px;
+	margin: 0 0 20px 0;
+	width: 100%;
+	min-height: 25vh;
+	overflow: auto;
+}
+
+.content-wrapper {
+	display: flex;
+	flex-direction: column;	/* Vertical content items */
+	align-items: center;
+	padding: 10px;
+}
+
+.content-item {
+	padding: 15px;
+	background-color: rgba(0, 150, 50, 0.1);
+	border-radius: 15px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+}
+
+.content-item img {
+	padding: 5px;
+	max-width: 50%;
+	max-height: 15rem;
+	float: right;
+	border-radius: 20px;
+}
+
+.reference {
+	text-decoration: none;	/* Remove underline */
+}
+
+
+/* TABLE */
+.table-wrapper {
+	display: flex;
+	flex-direction: column;	/* Vertical content items */
+	width: 100%;
+}
+
+table {
+	border-collapse: separate;	/* Use separate for border radius */
+	border-spacing: 0;			/* Remove spacing between cells */
+	margin: 25px 0;
+	font-size: 18px;
+	text-align: left;
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+	border-radius: 10px;
+	overflow: hidden;			/* Keep bottom corners rounded */
+}
+
+table a {
+	color: black;
+	text-decoration: none;
+}
+
+.th-wrapper {
+	display: inline-flex;
+	align-items: center;
+}
+
+table img {
+	float: right;
+	max-width: 2rem;
+	margin-left: 4rem;
+}
+
+th {
+	border: 1px solid rgb(0, 147, 118);
+	padding: 12px 15px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+td {
+	border: 1px solid rgb(221, 221, 221);
+	padding: 12px 15px;
+}
+
+thead tr {
+	background-color: rgb(0, 152, 121);
+	color: white;
+	text-align: left;
+	font-weight: bold;
+}
+
+tbody tr:nth-of-type(even) {
+	background-color: rgb(243, 243, 243);
+}
+
+/* Regions */
+.willamette-valley {
+	color: rgb(0, 0, 255);
+}
+.columbia-river-gorge {
+	color: rgb(0, 120, 20);
+}
+.central-oregon {
+	color: rgb(255, 0, 0);
+}
+.southern-oregon {
+	color: rgb(255, 100, 52);
+}
+.eastern-oregon {
+	color: rgb(225, 205, 0);
+}
+
+/* Averages */
+.high {
+	color: rgb(0, 140, 40);
+}
+.above-average {
+	color: rgb(80, 200, 80);
+}
+.average {
+	color: rgb(240, 200, 0);
+}
+.below-average {
+	color: rgb(255, 150, 0);
+}
